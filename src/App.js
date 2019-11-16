@@ -72,7 +72,7 @@ function InfoContainer(props) {
 
 function App() {
   return (
-    <div>
+    <div className="App">
       <Header />
       <Content>
         <Side side="left">
