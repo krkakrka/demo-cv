@@ -70,9 +70,23 @@ function InfoContainer(props) {
   );
 }
 
+function DesignLink() {
+  return (
+    <a
+      className="DesignLink"
+      rel="noopener noreferrer"
+      target="_blank"
+      href="https://weare.guru/wp-content/uploads/2014/10/Sam-Oehley-Creative-CV.jpg"
+    >
+      Design
+    </a>
+  );
+}
+
 function App() {
   return (
     <div className="App">
+      <DesignLink />
       <Header />
       <Content>
         <Side side="left">
