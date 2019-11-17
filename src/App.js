@@ -1,7 +1,5 @@
 import React from 'react';
-import logo from './logo.svg';
-import lady from './lady.png';
-import hello from './hello.png';
+import pillowMan from './pillow-man.jpg';
 import './App.css';
 
 
@@ -20,8 +18,8 @@ import './App.css';
 function Header() {
   return (
     <div className="Header">
-      <img src={hello} />
-      <img src={lady} />
+      <h1 className="Header-hello">hello</h1>
+      <img className="Header-image" src={pillowMan} alt="Something visual" />
       <SubHeader />
     </div>
   );
@@ -31,6 +29,7 @@ function SubHeader() {
   return (
     <div className="SubHeader">
       <h3>Karolis</h3>
+      <hr />
       <p>Curriculum vitae</p>
     </div>
   );

@@ -1,13 +1,49 @@
 .App {
   text-align: center;
-  max-width: 700px;
+  width: 700px;
+  height: 933px;
   margin: 50px auto;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  height: calc(100vh - 2 * 50px);
+}
+
+.Header {
+  position: relative;
+}
+
+.Header-hello {
+  font-size: 6em;
+  font-family: 'Gloria Hallelujah';
+  margin: 0;
+}
+
+.Header-image {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+}
+
+.SubHeader {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.SubHeader > hr {
+  width: 25%;
+}
+
+.SubHeader > * {
+  margin: 0;
 }
 
 .Content {
   display: flex;
+  margin: 30px;
 }
 
 .Side-left {
