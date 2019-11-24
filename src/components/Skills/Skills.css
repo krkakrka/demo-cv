@@ -1,0 +1,18 @@
+.SkillBar-container {
+  position: relative;
+}
+
+.SkillBar-bar-background {
+  width: 100%;
+  height: 1em;
+  background-color: grey;
+}
+
+.SkillBar-bar-foreground {
+  width: 0%;
+  height: 1em;
+  background-color: orange;
+  position: absolute;
+  top: 0;
+  left: 0;
+}

@@ -40,7 +40,10 @@ function App() {
         </Side>
         <Side side="right">
           <Description header="Personal statement" content="This is some personal statement" />
-          <Skills/>
+          <Skills skills={[
+            { name: 'Dancing', value: 30 },
+            { name: 'Beyblades', value: 87 },
+          ]}/>
           <Interests interests={['Karate', 'Bug fixing', 'Kitten stroking']} />
         </Side>
       </Content>
