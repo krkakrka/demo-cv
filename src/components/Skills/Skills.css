@@ -8,11 +8,28 @@
   background-color: grey;
 }
 
+.SkillBar-bar-foreground-container {
+  display: flex;
+  width: 100%;
+  height: 1em;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 .SkillBar-bar-foreground {
   width: 0%;
   height: 1em;
   background-color: orange;
-  position: absolute;
-  top: 0;
-  left: 0;
+}
+
+.Skillbar-bar-foreground-slider {
+  width: 0;
+  height: 1em;
+  border: 1px solid black;
+  box-sizing: border-box;
+}
+
+.Skillbar-bar-foreground-slider:hover {
+  cursor: col-resize;
 }

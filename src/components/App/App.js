@@ -41,8 +41,8 @@ function App() {
         <Side side="right">
           <Description header="Personal statement" content="This is some personal statement" />
           <Skills skills={[
-            { name: 'Dancing', value: 30 },
-            { name: 'Beyblades', value: 87 },
+            { name: 'Dancing', initialValue: 30 },
+            { name: 'Beyblades', initialValue: 87 },
           ]}/>
           <Interests interests={['Karate', 'Bug fixing', 'Kitten stroking']} />
         </Side>
