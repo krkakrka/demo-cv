@@ -5,7 +5,10 @@ import {
   Header,
   Content,
   Side,
-  InfoContainer
+  InfoContainer,
+  Description,
+  Skills,
+  Interests
 } from '..';
 
 
@@ -49,7 +52,9 @@ function App() {
           />
         </Side>
         <Side side="right">
-          content right
+          <Description header="Personal statement" content="This is some personal statement" />
+          <Skills />
+          <Interests />
         </Side>
       </Content>
     </div>

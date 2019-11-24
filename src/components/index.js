@@ -3,6 +3,9 @@ import Header from './Header';
 import { Content, Side } from './Content'
 import InfoContainer from './InfoContainer';
 import App from './App';
+import Description from './Description';
+import Skills from './Skills';
+import Interests from './Interests';
 
 export {
   App,
@@ -10,5 +13,8 @@ export {
   Header,
   Content,
   Side,
-  InfoContainer
+  InfoContainer,
+  Description,
+  Skills,
+  Interests
 };
