@@ -1,0 +1,10 @@
+.DesignLink {
+  position: fixed;
+  left: 0;
+  top: 0;
+  border: 1px solid black;
+  background-color: gray;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 5px;
+}

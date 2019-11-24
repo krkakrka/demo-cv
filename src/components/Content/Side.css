@@ -1,0 +1,9 @@
+.Side-left {
+  order: 0;
+  flex: 1;
+}
+
+.Side-right {
+  order: 1;
+  flex: 1;
+}

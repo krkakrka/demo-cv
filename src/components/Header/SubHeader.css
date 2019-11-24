@@ -1,0 +1,17 @@
+.SubHeader {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.SubHeader > hr {
+  width: 25%;
+}
+
+.SubHeader > * {
+  margin: 0;
+}

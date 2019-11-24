@@ -1,0 +1,16 @@
+.Header {
+  position: relative;
+}
+
+.Header-hello {
+  font-size: 6em;
+  font-family: 'Gloria Hallelujah';
+  margin: 0;
+}
+
+.Header-image {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+}
