@@ -6,7 +6,7 @@ import {
   Content,
   Side,
   InfoContainer
-} from './components';
+} from '..';
 
 
 // content
