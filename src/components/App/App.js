@@ -11,19 +11,6 @@ import {
   Interests
 } from '..';
 
-
-// content
-//   leftSideca
-//     infoContainer
-//     infoContainer
-//   leftSide
-//   rightSide
-//     description
-//     skills
-//     interests
-//   rightSide
-// content
-
 function App() {
   return (
     <div className="App">
@@ -53,7 +40,7 @@ function App() {
         </Side>
         <Side side="right">
           <Description header="Personal statement" content="This is some personal statement" />
-          <Skills />
+          <Skills skills={['Karate', 'Bug fixing', 'Kitten stroking']}/>
           <Interests />
         </Side>
       </Content>
