@@ -1,4 +1,5 @@
 import React from 'react';
+import './Side.css';
 
 function Side(props) {
   const side = props.side;

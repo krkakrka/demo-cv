@@ -16,7 +16,7 @@ function App() {
     <div className="App">
       <DesignLink />
       <Header />
-      <Content>
+      <Content className="App-Content">
         <Side side="left">
           <InfoContainer
             header="Details"

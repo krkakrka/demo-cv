@@ -1,10 +1,10 @@
 import React from 'react';
 import './Content.css';
 
-function Content(props) {
+function Content({ children, className, ...otherProps }) {
   return (
-    <div className="Content">
-      {props.children}
+    <div className={`Content ${className}`} {...otherProps}>
+      {children}
     </div>
   );
 }
