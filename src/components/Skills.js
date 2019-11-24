@@ -1,11 +1,7 @@
 import React from 'react';
 
 function Skills({ skills }) {
-  return (
-    <div>
-      {skills.join(' | ')}
-    </div>
-  );
+  return 'skills';
 }
 
 export default Skills;
