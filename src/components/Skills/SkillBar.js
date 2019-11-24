@@ -35,15 +35,14 @@ function SkillBar({ initialValue }) {
       <div
         className="SkillBar-bar-foreground-container"
         ref={skillContainerEl}
+        onMouseDown={startAdjustSkill}
+        onClick={adjustSkill}
       >
         <div
           className="SkillBar-bar-foreground"
           style={{ width: `${draggedValue}%` }}
         />
-        <div
-          className="Skillbar-bar-foreground-slider"
-          onMouseDown={startAdjustSkill}
-        />
+        <div className="Skillbar-bar-foreground-slider" />
       </div>
     </div>
   );
