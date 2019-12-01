@@ -41,9 +41,12 @@ function App() {
         <Side side="right">
           <Description header="Personal statement" content="This is some personal statement" />
           <Skills skills={[
-            { name: 'Dancing', initialValue: 30 },
-            { name: 'Beyblades', initialValue: 87 },
-          ]}/>
+              { label: 'Climbing', percentage: 15 },
+              { label: 'Singing', percentage: 55 },
+              { label: 'Dancing', percentage: 95 },
+            ]}
+            onSkillUpdated={console.log}
+          />
           <Interests interests={['Karate', 'Bug fixing', 'Kitten stroking']} />
         </Side>
       </Content>
