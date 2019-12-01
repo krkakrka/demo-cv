@@ -1,15 +1,18 @@
 import React from 'react';
 import SkillBar from './SkillBar';
+import './Skills.css';
 
-function Skills({ skills }) {
+function Skills({ skills, onSkillUpdated,  }) {
   return (
     <div>
-      <h3>Skills and strenghts</h3>
+      <h3>Skills</h3>
       {skills.map(skill => (
-        <div key={skill.name + skill.value}>
-          <span>{skill.name}</span>
-          <SkillBar initialValue={skill.initialValue} />
-        </div>
+        <SkillBar
+          key={skill.label + skill.percentage}
+          label={skill.label}
+          initialPercentage={skill.percentage}
+          onPercentageUpdated={onSkillUpdated}
+        />
       ))}
     </div>
   );

@@ -5,44 +5,42 @@ function preventDefault(e) {
   e.preventDefault();
 }
 
-function SkillBar({ initialValue }) {
-  const [draggedValue, setDraggedValue] = React.useState(initialValue);
-  const skillContainerEl = React.useRef();
+function SkillBar({ label, initialPercentage, onPercentageUpdated }) {
+  const [percentage, setPercentage] = React.useState(initialPercentage);
+  const [isBeingDragged, setIsBeingDragged] = React.useState(false);
 
-  const adjustSkill = (e) => {
-    const { x: containerX, width: fullWidth } = skillContainerEl.current.getBoundingClientRect();
-    const { clientX: mouseX } = e;
-    const relativeX = mouseX - containerX;
-    const relativeXPercentage = Math.round(relativeX / fullWidth * 100);
-    setDraggedValue(relativeXPercentage);
+  const updatePercentage = (e) => {
+    const boundClientRect = e.currentTarget.getBoundingClientRect();
+    const { left, width } = boundClientRect;
+    const mouseX = e.clientX;
+    const mouseOffsetPx = mouseX - left;
+    const mouseOffsetPercentage = mouseOffsetPx / width * 100;
+    setPercentage(mouseOffsetPercentage);
+    onPercentageUpdated(mouseOffsetPercentage);
   };
 
-  const startAdjustSkill = (e) => {
-    window.addEventListener('mousemove', adjustSkill);
-    window.addEventListener('mouseup', stopAdjustSkill);
+  const startAdjustment = () => {
+    setIsBeingDragged(true);
     window.addEventListener('selectstart', preventDefault);
   };
-
-  const stopAdjustSkill = () => {
-    window.removeEventListener('mousemove', adjustSkill);
-    window.removeEventListener('mouseup', stopAdjustSkill);
+  const stopAdjustment = () => {
+    setIsBeingDragged(false);
     window.removeEventListener('selectstart', preventDefault);
   };
 
   return (
-    <div className="SkillBar-container">
-      <div className="SkillBar-bar-background" />
+    <div>
+      <label>{label}</label>
       <div
-        className="SkillBar-bar-foreground-container"
-        ref={skillContainerEl}
-        onMouseDown={startAdjustSkill}
-        onClick={adjustSkill}
+        className="SkillBar-background"
+        onMouseMove={(e) => isBeingDragged && updatePercentage(e)}
+        onClick={updatePercentage}
+        onMouseDown={startAdjustment}
+        onMouseUp={stopAdjustment}
       >
-        <div
-          className="SkillBar-bar-foreground"
-          style={{ width: `${draggedValue}%` }}
-        />
-        <div className="Skillbar-bar-foreground-slider" />
+        <div className="SkillBar-foreground" style={{
+          width: `${percentage}%`
+        }} />
       </div>
     </div>
   );
